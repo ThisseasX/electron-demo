@@ -5,7 +5,7 @@ import { initFileEvents } from 'models/file';
 import autoUpdate from 'update-electron-app';
 
 autoUpdate({
-  updateInterval: '5s',
+  updateInterval: '5 minutes',
 });
 
 const createWindow = () => {
