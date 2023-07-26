@@ -3,7 +3,8 @@ productName: Electron Demo
 directories:
   buildResources: build
 files:
-  - 'out/**'
+  - '!**/*'
+  - './out/**/*'
 asarUnpack:
   - 'resources/**'
 nsis:
