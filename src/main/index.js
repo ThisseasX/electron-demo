@@ -2,11 +2,6 @@ import { app, BrowserWindow, shell } from 'electron';
 import path from 'path';
 import { electronApp, is, optimizer, platform } from '@electron-toolkit/utils';
 import { initFileEvents } from 'models/file';
-import autoUpdate from 'update-electron-app';
-
-autoUpdate({
-  updateInterval: '5 minutes',
-});
 
 const createWindow = () => {
   const window = new BrowserWindow({
