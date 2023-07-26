@@ -1,6 +1,6 @@
 {
   "name": "electron-demo",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Demo using Electron and Vite.",
   "main": "./out/main/index.js",
   "repository": {
