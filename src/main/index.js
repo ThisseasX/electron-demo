@@ -4,7 +4,9 @@ import { electronApp, is, optimizer, platform } from '@electron-toolkit/utils';
 import { initFileEvents } from 'models/file';
 import autoUpdate from 'update-electron-app';
 
-autoUpdate();
+autoUpdate({
+  updateInterval: '5s',
+});
 
 const createWindow = () => {
   const window = new BrowserWindow({
