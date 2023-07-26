@@ -21,7 +21,7 @@ const App = () => {
           href="https://github.com/alex8088/electron-vite"
           rel="noopener noreferrer"
         >
-          Getting Help 2
+          Getting Help 3
         </a>
       </div>
 
