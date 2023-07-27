@@ -12,6 +12,7 @@
     "preview": "electron-vite preview",
     "build": "electron-vite build",
     "build:win": "npm run build && electron-builder --win",
+    "build:mac": "npm run build && electron-builder --mac",
     "format": "prettier --write .",
     "lint": "eslint --fix .",
     "postinstall": "electron-builder install-app-deps"
