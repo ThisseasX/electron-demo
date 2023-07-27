@@ -1,11 +1,6 @@
-import path from 'path';
-import { Low } from 'lowdb';
-import { JSONFile } from 'lowdb/node';
+import { db } from 'db';
 
-const adapter = new JSONFile(path.join(__dirname, 'db.json'));
-const db = new Low(adapter, {});
-
-export const getDogs = () => db.read();
+export const getDogs = () => db.data.dogs;
 
 export const addDog = (_, dog) => {
   db.data.dogs.push(dog);
