@@ -1,7 +1,7 @@
 import { app, BrowserWindow, shell } from 'electron';
 import path from 'path';
 import { electronApp, is, optimizer, platform } from '@electron-toolkit/utils';
-import { initFileEvents } from 'models/file';
+import { initDogsEvents } from 'models/dogs';
 
 const createWindow = () => {
   const window = new BrowserWindow({
@@ -49,5 +49,5 @@ app.whenReady().then(() => {
     }
   });
 
-  initFileEvents();
+  initDogsEvents();
 });

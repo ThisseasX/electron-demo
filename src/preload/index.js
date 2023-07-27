@@ -1,6 +1,6 @@
 import { contextBridge } from 'electron';
-import { getFile } from './events';
+import * as dogs from 'models/dogs';
 
 contextBridge.exposeInMainWorld('api', {
-  getFile,
+  dogs,
 });
