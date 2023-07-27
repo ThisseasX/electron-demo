@@ -1,7 +1,7 @@
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite';
 import path from 'path';
 
-const VENDOR_CHUNKS = ['lowdb', 'cli-truncate'];
+const VENDOR_CHUNKS = ['lowdb'];
 
 const getChunkName = (id) => VENDOR_CHUNKS.find((chunk) => id.includes(chunk));
 
