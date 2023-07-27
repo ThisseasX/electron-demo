@@ -11,10 +11,6 @@ createDirIfNotExists(dbDir);
 const adapter = new JSONFile(path.join(dbDir, 'db.json'));
 const db = new Low(adapter, { dogs: [] });
 
-(async () => {
-  await db.read();
-  db.data.dogs.push({ name: 'ASAD', age: 6 });
-  await db.write();
-})();
+db.read();
 
 export { db };
