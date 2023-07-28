@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { EmailOne } from './templates';
+import { EmailOne } from 'email-templates';
 
 const transport = nodemailer.createTransport({
   host: 'smtp.ethereal.email',

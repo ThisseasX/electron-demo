@@ -14,6 +14,7 @@ export default defineConfig({
         db: path.resolve('./src/main/db'),
         utils: path.resolve('./src/main/utils'),
         shared: path.resolve('./src/shared'),
+        'email-templates': path.resolve('./email-templates'),
       },
     },
     build: {

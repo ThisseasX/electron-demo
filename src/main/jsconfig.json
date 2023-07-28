@@ -4,7 +4,8 @@
       "models/*": ["./models/*"],
       "db": ["./db"],
       "utils": ["./utils"],
-      "shared/*": ["../shared/*"]
+      "shared/*": ["../shared/*"],
+      "email-templates": ["../../email-templates"]
     }
   }
 }
