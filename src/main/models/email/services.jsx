@@ -1,8 +1,7 @@
 import nodemailer from 'nodemailer';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-
-const App = () => <div>Hello World</div>;
+import { EmailOne } from './templates';
 
 const transport = nodemailer.createTransport({
   host: 'smtp.ethereal.email',
@@ -18,6 +17,6 @@ export const sendEmail = () => {
     from: '"Doggo" <dog@dogs.com>',
     to: '"Cat" <cat@cats.com',
     subject: 'Hello Email!',
-    html: renderToStaticMarkup(<App />),
+    html: renderToStaticMarkup(<EmailOne name="Cat" sender="Doggo" />),
   });
 };
