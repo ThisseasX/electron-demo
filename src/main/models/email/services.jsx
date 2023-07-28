@@ -1,6 +1,8 @@
 import nodemailer from 'nodemailer';
-import pug from 'pug';
-import template from './template.pug';
+import React from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+
+const App = () => <div>Hello World</div>;
 
 const transport = nodemailer.createTransport({
   host: 'smtp.ethereal.email',
@@ -16,6 +18,6 @@ export const sendEmail = () => {
     from: '"Doggo" <dog@dogs.com>',
     to: '"Cat" <cat@cats.com',
     subject: 'Hello Email!',
-    html: pug.render(template, { name: 'Cat', sender: '<b>Doggo</b>' }),
+    html: renderToStaticMarkup(<App />),
   });
 };
