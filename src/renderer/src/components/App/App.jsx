@@ -26,11 +26,16 @@ const App = () => {
     setDogs(dogs);
   };
 
+  const handleSendEmail = () => {
+    window.api.email.sendEmail();
+  };
+
   return (
     <div className={classes.root}>
       <div>
         <button onClick={handleDeleteDogs}>Delete Dogs</button>
         <button onClick={handleAddDog}>Add Dog</button>
+        <button onClick={handleSendEmail}>Send Email</button>
       </div>
 
       <div className={classes.dogs}>

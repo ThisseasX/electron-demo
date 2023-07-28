@@ -2,6 +2,7 @@ import { app, BrowserWindow, shell } from 'electron';
 import path from 'path';
 import { electronApp, is, optimizer, platform } from '@electron-toolkit/utils';
 import { initDogsEvents } from 'models/dogs';
+import { initEmailEvents } from 'models/email';
 
 const createWindow = () => {
   const window = new BrowserWindow({
@@ -50,4 +51,5 @@ app.whenReady().then(() => {
   });
 
   initDogsEvents();
+  initEmailEvents();
 });

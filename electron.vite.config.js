@@ -1,5 +1,6 @@
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite';
 import path from 'path';
+import pugPlugin from './src/plugins/vite-plugin-pug';
 
 const VENDOR_CHUNKS = ['lowdb'];
 
@@ -7,7 +8,7 @@ const getChunkName = (id) => VENDOR_CHUNKS.find((chunk) => id.includes(chunk));
 
 export default defineConfig({
   main: {
-    plugins: [externalizeDepsPlugin({ exclude: VENDOR_CHUNKS })],
+    plugins: [externalizeDepsPlugin({ exclude: VENDOR_CHUNKS }), pugPlugin()],
     resolve: {
       alias: {
         models: path.resolve('./src/main/models'),
