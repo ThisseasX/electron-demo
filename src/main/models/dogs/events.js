@@ -3,7 +3,7 @@ import { EVENTS } from 'shared/constants';
 import { getDogs, addDog, deleteDogs } from './services';
 
 export const initDogsEvents = () => {
-  ipcMain.handle(EVENTS.GET_DOGS, getDogs);
-  ipcMain.handle(EVENTS.ADD_DOG, addDog);
-  ipcMain.handle(EVENTS.DELETE_DOGS, deleteDogs);
+  ipcMain.handle(EVENTS.DOGS.GET_DOGS, getDogs);
+  ipcMain.handle(EVENTS.DOGS.ADD_DOG, addDog);
+  ipcMain.handle(EVENTS.DOGS.DELETE_DOGS, deleteDogs);
 };
