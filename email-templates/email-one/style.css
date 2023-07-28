@@ -3,9 +3,7 @@ html {
   font-family: sans-serif;
 }
 
-*,
-**::before,
-**::after {
+* {
   box-sizing: inherit;
 }
 
