@@ -27,3 +27,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN  }}
           release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+        env:
+          MAIN_VITE_EMAIL_SERVICE: ${{ secrets.MAIN_VITE_EMAIL_SERVICE }}
+          MAIN_VITE_EMAIL_USER: ${{ secrets.MAIN_VITE_EMAIL_USER }}
+          MAIN_VITE_EMAIL_PASS: ${{ secrets.MAIN_VITE_EMAIL_PASS }}
