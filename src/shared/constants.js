@@ -1,4 +1,10 @@
 export const EVENTS = {
+  WINDOW: {
+    MINIMIZE: 'window:minimize',
+    MAXIMIZE: 'window:maximize',
+    UNMAXIMIZE: 'window:unmaximize',
+    CLOSE: 'window:close',
+  },
   DOGS: {
     GET_DOGS: 'dogs:get-dogs',
     ADD_DOG: 'dogs:add-dog',

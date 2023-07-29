@@ -1,3 +1,53 @@
+.header {
+  padding: 24px 32px;
+  font-family: sans-serif;
+  background-color: #f3f3f3;
+  -webkit-app-region: drag;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.glass {
+  background: rgb(0 161 255 / 5%);
+  box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(10.6px);
+  border: 1px solid rgb(0 161 255);
+}
+
+.title {
+  font-size: 48px;
+}
+
+.controls {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  height: 100%;
+}
+
+.controlContainer {
+  -webkit-app-region: no-drag;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    background-color: rgb(0 161 255 / 10%);
+  }
+}
+
+.control {
+  color: rgb(0 161 255);
+  font-size: 24px;
+}
+
 .root {
   display: flex;
   flex-direction: column;

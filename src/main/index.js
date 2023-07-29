@@ -3,6 +3,7 @@ import path from 'path';
 import { electronApp, is, optimizer, platform } from '@electron-toolkit/utils';
 import { initDogsEvents } from 'models/dogs';
 import { initEmailEvents } from 'models/email';
+import { initWindowEvents } from 'models/window';
 
 const createWindow = () => {
   const window = new BrowserWindow({
@@ -10,6 +11,7 @@ const createWindow = () => {
     height: 768,
     show: false,
     autoHideMenuBar: true,
+    frame: false,
     webPreferences: {
       preload: path.join(__dirname, '../preload/index.js'),
     },
@@ -27,6 +29,10 @@ const createWindow = () => {
   } else {
     window.loadFile(path.join(__dirname, '../renderer/index.html'));
   }
+
+  initDogsEvents();
+  initEmailEvents();
+  initWindowEvents(window);
 };
 
 app.whenReady().then(() => {
@@ -49,7 +55,4 @@ app.whenReady().then(() => {
       app.quit();
     }
   });
-
-  initDogsEvents();
-  initEmailEvents();
 });
