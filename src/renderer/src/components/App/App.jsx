@@ -7,6 +7,7 @@ import {
   LiaWindowRestore,
   LiaWindowClose,
 } from 'react-icons/lia';
+import { faker } from '@faker-js/faker';
 import classes from './style.module.css';
 
 const App = () => {
@@ -64,9 +65,9 @@ const App = () => {
   const handleAddDog = async () => {
     const dogs = await window.api.dogs.addDog({
       id: Date.now(),
-      name: 'Buddy',
-      breed: 'Golden Retriever',
-      age: 5,
+      name: faker.person.firstName(),
+      breed: faker.animal.dog(),
+      age: faker.number.int({ min: 1, max: 10 }),
     });
 
     setDogs(dogs);
@@ -110,10 +111,27 @@ const App = () => {
         <div className={classes.dogs}>
           {dogs.map((dog) => (
             <div key={dog.id} className={classes.dog}>
-              <div>ID: {dog.id}</div>
-              <div>Name: {dog.name}</div>
-              <div>Breed: {dog.breed}</div>
-              <div>Age: {dog.age}</div>
+              <div>🐶</div>
+
+              <div>
+                <div className={classes.key}>ID:</div>
+                <div>{dog.id}</div>
+              </div>
+
+              <div>
+                <div className={classes.key}>Name:</div>
+                <div>{dog.name}</div>
+              </div>
+
+              <div>
+                <div className={classes.key}>Breed:</div>
+                <div>{dog.breed}</div>
+              </div>
+
+              <div>
+                <div className={classes.key}>Age:</div>
+                <div>{dog.age}</div>
+              </div>
             </div>
           ))}
         </div>

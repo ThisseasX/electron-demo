@@ -69,9 +69,20 @@
 .dog {
   display: flex;
   gap: 24px;
-  width: fit-content;
   border: 1px solid #d3d3d3;
   padding: 8px;
   border-radius: 4px;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 32%);
+
+  & > :nth-child(3) {
+    width: 80px;
+  }
+
+  & > :nth-child(4) {
+    flex: 1;
+  }
+}
+
+.key {
+  font-weight: bold;
 }
