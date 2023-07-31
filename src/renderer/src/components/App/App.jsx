@@ -103,8 +103,8 @@ const App = () => {
 
       <div className={classes.root}>
         <div>
-          <button onClick={handleDeleteDogs}>Delete Dogs</button>
           <button onClick={handleAddDog}>Add Dog</button>
+          <button onClick={handleDeleteDogs}>Delete Dogs</button>
           <button onClick={handleSendEmail}>Send Email</button>
         </div>
 
